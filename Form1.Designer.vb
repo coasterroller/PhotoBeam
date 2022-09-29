@@ -45,6 +45,9 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TrackBar6 = New System.Windows.Forms.TrackBar()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +55,7 @@ Partial Class Form1
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -59,7 +63,7 @@ Partial Class Form1
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Location = New System.Drawing.Point(5, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(380, 289)
+        Me.PictureBox1.Size = New System.Drawing.Size(380, 335)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -69,7 +73,7 @@ Partial Class Form1
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox2.Location = New System.Drawing.Point(391, 5)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(380, 289)
+        Me.PictureBox2.Size = New System.Drawing.Size(380, 335)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
@@ -246,11 +250,40 @@ Partial Class Form1
         Me.TextBox6.TabIndex = 21
         Me.TextBox6.Text = "1"
         '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(918, 327)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(45, 20)
+        Me.TextBox7.TabIndex = 24
+        Me.TextBox7.Text = "1"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(903, 300)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(41, 13)
+        Me.Label6.TabIndex = 23
+        Me.Label6.Text = "Spacer"
+        '
+        'TrackBar6
+        '
+        Me.TrackBar6.Location = New System.Drawing.Point(780, 300)
+        Me.TrackBar6.Maximum = 19
+        Me.TrackBar6.Name = "TrackBar6"
+        Me.TrackBar6.Size = New System.Drawing.Size(117, 45)
+        Me.TrackBar6.TabIndex = 22
+        Me.TrackBar6.TickStyle = System.Windows.Forms.TickStyle.None
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(971, 301)
+        Me.ClientSize = New System.Drawing.Size(971, 352)
+        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TrackBar6)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TrackBar5)
@@ -281,6 +314,7 @@ Partial Class Form1
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -309,4 +343,7 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TrackBar6 As TrackBar
 End Class

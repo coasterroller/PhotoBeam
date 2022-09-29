@@ -30,10 +30,10 @@
                 xx = xx + 2
                 pixelColor = myBitMap.GetPixel(x, y)
                 file2.WriteLine("    <freenode id=" & """" & xx & """" & " >")
-                file2.WriteLine(Replace("      <pos>" & -(CInt(TextBox1.Text) / 2) + x & " " & Random_number(CInt(TextBox5.Text), CInt(TextBox6.Text)) & " " & -(CInt(TextBox2.Text) / 2) + y & "</pos>", ",", "."))
+                file2.WriteLine(Replace("      <pos>" & -(CInt(TextBox1.Text) / 2) + (x * CInt(TextBox7.Text)) & " " & Random_number(CInt(TextBox5.Text), CInt(TextBox6.Text)) & " " & -(CInt(TextBox2.Text) / 2) + (y * CInt(TextBox7.Text)) & "</pos>", ",", "."))
                 file2.WriteLine("    </freenode>")
                 file2.WriteLine("    <footernode id=" & """" & xx + 1 & """" & " contype=" & """" & "0" & """" & " basetype=" & """" & "0" & """" & ">")
-                file2.WriteLine(Replace("      <pos> " & -(CInt(TextBox1.Text) / 2) + x & " " & CInt(TextBox4.Text) & " " & -(CInt(TextBox2.Text) / 2) + y & " </pos>", ",", "."))
+                file2.WriteLine(Replace("      <pos> " & -(CInt(TextBox1.Text) / 2) + (x * CInt(TextBox7.Text)) & " " & CInt(TextBox4.Text) & " " & -(CInt(TextBox2.Text) / 2) + (y * CInt(TextBox7.Text)) & " </pos>", ",", "."))
                 file2.WriteLine("      <rotation>0</rotation>")
                 file2.WriteLine("      <height_above_terrain>0.3</height_above_terrain>")
                 file2.WriteLine("      <colormode_custom r=" & """" & Math.Round(pixelColor.R / 255, 2) & """" & " g=" & """" & Math.Round(pixelColor.G / 255, 2) & """" & " b=" & """" & Math.Round(pixelColor.B / 255, 2) & """" & "/>")
@@ -91,5 +91,10 @@
         If TrackBar5.Value < 1 Then TextBox6.Text = 1
         TextBox6.Text = 1 + TrackBar5.Value
         If CInt(TextBox6.Text) < CInt(TextBox5.Text) Then TextBox6.Text = (TextBox5.Text)
+    End Sub
+
+    Private Sub TrackBar6_Scroll(sender As Object, e As EventArgs) Handles TrackBar6.Scroll
+        If TrackBar6.Value < 1 Then TextBox7.Text = 1
+        TextBox7.Text = 1 + TrackBar6.Value
     End Sub
 End Class
